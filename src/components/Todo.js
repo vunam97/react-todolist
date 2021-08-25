@@ -33,8 +33,9 @@ const ButtonStyled = styled(Button)`
 `
 
 export default function Todo({ todo, onCheckBtnClick, onDeleteBtnClick }) {
+
     return (
-        <div>
+        <div className="todo">
             <ButtonStyled 
                 isCompleted = {todo.isCompleted}
                 shouldFitContainer 
@@ -51,12 +52,12 @@ export default function Todo({ todo, onCheckBtnClick, onDeleteBtnClick }) {
             >
                 {todo.name}
             </ButtonStyled>
-            <Button
+            <ButtonStyled
                 appearance="danger"
                 onClick={() => onDeleteBtnClick(todo.id)}
             >
                     Xóa
-            </Button>
+            </ButtonStyled>
         
         </div>
     )
